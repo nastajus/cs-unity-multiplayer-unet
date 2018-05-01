@@ -3,8 +3,11 @@ https://www.youtube.com/watch?v=qGkkaNkq8co
 
 ### Concepts
 - actually uses `sockets`.  
-- sockets opens a connection between the *client* and the *game*. (? --> aren't those the same?)
 - connection needs to be **maintained** generally.
+
+
+### Lower level concepts
+- sockets: opens a connection "between the *client* and the *game*."
 - UNET: peer-to-peer.
 
 
