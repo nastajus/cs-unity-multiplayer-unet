@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Client : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private const int MAX_CONNECTION = 100;
+
+    private int port = 5701;
+    private int webHostId;
+
+    private int reliableChannel;
+    private int unreliableChannel;
+
+    private bool isStarted = false;
+    private byte error;
+
 }
