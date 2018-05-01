@@ -12,26 +12,20 @@ https://www.youtube.com/watch?v=qGkkaNkq8co
 - option 2) async action 
 
 
-### Concepts
-- actually uses `sockets`.  
+### Concepts (crucial sentences)
 - connection needs to be **maintained** generally. 
 - ask yourself: 'does the receiver really need that info?'  ✓
-- host: define on BOTH the client and the server. ✓
-- different pathways executed: depending if you are the client or server.  ✓
+- different code pathways execute: depending if you are the client or server.  ✓
 - check every single frame if messages were sent.  ✓
 
 
-### Lower level concepts:
-- sockets: opens a connection "between the *client* and the *game*."
-
-
-### Lower level terminology:
-- sockets: sends data back and forth.
-- UNET: peer-to-peer.
-- low-level api: network transport api.
+### Terminology:
+- sockets: (used to) send data back and forth.
+- sockets: (used to) open a connection "between the *client* and the *game*."
 - Network Transport Layer.
-- reliable vs unreliable channels  ✓
-- host: both  ✓
+- reliable vs unreliable  ✓
+- UNET: peer-to-peer.
+- host: define on BOTH the client and the server. ✓
 - client: will connects with a simply line of code.
 - server: will wait for a connection and wait for messages.
 
