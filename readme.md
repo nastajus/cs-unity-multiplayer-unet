@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=qGkkaNkq8co
 - step 3): open another socket once client connects.
 
 
-### Types:
+### Networking Types:
 - option 1) sync action -- this video
 - option 2) async action 
 
@@ -17,6 +17,7 @@ https://www.youtube.com/watch?v=qGkkaNkq8co
 - ask yourself: 'does the receiver really need that info?'  ✓
 - different code pathways execute: depending if you are the client or server.  ✓
 - check every single frame if messages were sent.  ✓
+- types of messages (only four): 1) nothing, 2) connected, 3) data, 4) disconnect.
 
 
 ### Terminology:
