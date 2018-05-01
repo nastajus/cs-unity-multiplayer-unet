@@ -1,6 +1,17 @@
 Unity Multiplayer (UNET) - Transport Layer API [C#][Stream VOD]
 https://www.youtube.com/watch?v=qGkkaNkq8co
 
+### Tutorial steps:
+- step 1): initiate the `Network Transport Layer`
+- step 2): two different pathways  ✓
+- step 3): open another socket once client connects.
+
+
+### Types:
+- option 1) sync action -- this video
+- option 2) async action 
+
+
 ### Concepts
 - actually uses `sockets`.  
 - connection needs to be **maintained** generally. 
@@ -24,22 +35,6 @@ https://www.youtube.com/watch?v=qGkkaNkq8co
 - client: will connects with a simply line of code.
 - server: will wait for a connection and wait for messages.
 
-
-### Tutorial steps:
-- step 1): initiate the `Network Transport Layer`
-- step 2): two different pathways  ✓
-- step 3): open another socket once client connects.
-
-
-### Verbose Notes as Landmark Reminders:
-- option 1) sync action:  racing game, an MMO game, etc. -- anything really for instant action.
-- option 2) async action:  so say every 10 seconds, a request is created and there's a response. 
-	- like Pokemon Go, uses a *web server*-style networking connection maintenance method instead. 
-
-
-
-### Unrelated questions inspired and paged out
-- understand difference between physics-based `FixedUpdate` calls vs. regular `update` calls. --> deemed irrelevant for now.
 
 
 ###### Legend 
