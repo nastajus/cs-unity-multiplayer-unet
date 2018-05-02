@@ -36,4 +36,33 @@ public class Server : MonoBehaviour
         isStarted = true;
     }
 
+    //start listening
+    private void Update()
+    {
+        // we don't want Update to run if Client is not started. 
+        if (!isStarted) return;
+
+        int recHostId;
+        int connectionId;
+        int channelId;
+        byte[] recBuffer = new byte[1024];
+        int bufferSize = 1024;
+        int dataSize;
+        byte error;
+
+        NetworkEventType recData = NetworkTransport.Receive(out recHostId, out connectionId, out channelId, recBuffer,
+            bufferSize, out dataSize, out error);
+        switch (recData)
+        {
+            case NetworkEventType.Nothing:          //1
+                break;
+            case NetworkEventType.ConnectEvent:     //2
+                break;
+            case NetworkEventType.DataEvent:        //3
+                break;
+            case NetworkEventType.DisconnectEvent:  //4
+                break;
+        }
+    }
+
 }
