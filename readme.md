@@ -1,5 +1,6 @@
 Unity Multiplayer (UNET) - Transport Layer API [C#][Stream VOD]
 https://www.youtube.com/watch?v=qGkkaNkq8co
+by Michael Doyon
 
 ### Tutorial steps:
 - step 1): initiate the `Network Transport Layer`
@@ -33,6 +34,10 @@ https://www.youtube.com/watch?v=qGkkaNkq8co
 
 - LLAPI: Low-Level API (Unity-specific).
 - UNET: peer-to-peer (Unity-specific).
+
+### Code snippets employed:
+- `NetworkTransport.Receive` will receive packets.
+- 
 
 
 ### Off-topic questions:

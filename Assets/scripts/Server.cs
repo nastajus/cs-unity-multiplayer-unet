@@ -50,6 +50,8 @@ public class Server : MonoBehaviour
         int dataSize;
         byte error;
 
+        //server can receive communications from many clients.
+        //every single client is going to have a different connection.
         NetworkEventType recData = NetworkTransport.Receive(out recHostId, out connectionId, out channelId, recBuffer,
             bufferSize, out dataSize, out error);
         switch (recData)

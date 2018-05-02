@@ -55,6 +55,7 @@ public class Client : MonoBehaviour {
         int dataSize;
         byte error;
 
+        //client can only receive communications from the server, nothing else.
         NetworkEventType recData = NetworkTransport.Receive(out recHostId, out connectionId, out channelId, recBuffer,
             bufferSize, out dataSize, out error);
         switch (recData)
