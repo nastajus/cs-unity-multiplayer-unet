@@ -49,7 +49,7 @@ public class Client : MonoBehaviour {
 
         hostId = NetworkTransport.AddHost(topo, port, null);
 
-        connectionId = NetworkTransport.Connect(hostId, "localhost", port, 0, out error);
+        connectionId = NetworkTransport.Connect(hostId, "127.0.0.1", port, 0, out error);
 
         connectionTime = Time.time;
         isConnected = true;
