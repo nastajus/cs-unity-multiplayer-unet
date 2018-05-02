@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class Client : MonoBehaviour {
 
@@ -22,9 +23,22 @@ public class Client : MonoBehaviour {
     private bool isStarted; //game flow
     private byte error;
 
+    private string playerName = "";
+
     //not in Start() but rather on demand:
+    //reference in the UI hierarchy > Canvas > ConnectButton > Inspector > Button > On Click() via the Client object attached by drag-and-drop, and opening droplist that appeared and picking Client > Connect ().
     public void Connect()
     {
+        //does the player have a name?
+        string _playerName = GameObject.Find("NameInput").GetComponent<InputField>().text;
+        if (_playerName == "")
+        {
+            Debug.Log("You must enter a name!");
+            return;
+        }
+
+        playerName = _playerName;
+
         NetworkTransport.Init();
         ConnectionConfig cc = new ConnectionConfig();
 

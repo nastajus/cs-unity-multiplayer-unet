@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -59,10 +60,14 @@ public class Server : MonoBehaviour
             case NetworkEventType.Nothing:          //1
                 break;
             case NetworkEventType.ConnectEvent:     //2
+                Debug.Log("Player cId: " + " has connected.");
                 break;
             case NetworkEventType.DataEvent:        //3
+                string msg = Encoding.Unicode.GetString(recBuffer, 0, dataSize);
+                Debug.Log("Player cId: " + " has sent : " + msg);
                 break;
             case NetworkEventType.DisconnectEvent:  //4
+                Debug.Log("Player cId: " + " has disconnected.");
                 break;
         }
     }

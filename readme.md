@@ -35,9 +35,12 @@ by Michael Doyon
 - LLAPI: Low-Level API (Unity-specific).
 - UNET: peer-to-peer (Unity-specific).
 
-### Code snippets employed:
+### Networking-specific Code snippets used:
 - `NetworkTransport.Receive` will receive packets.
-- 
+
+
+### Unity Code snippets used:
+- `GameObject.Find("NameInput").GetComponent<InputField>().text` plus `using UnityEngine.UI;` to refer to editor hierarchy > Canvas > InputField > text object.
 
 
 ### Off-topic questions:
