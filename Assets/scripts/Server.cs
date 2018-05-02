@@ -11,11 +11,9 @@ public class Server : MonoBehaviour
 
     private int port = 5701;
 
-    //web sockets related
     private int hostId;
     private int webHostId; 
 
-    //tcp or udp related.
     private int reliableChannel;
     private int unreliableChannel;
 
@@ -32,8 +30,7 @@ public class Server : MonoBehaviour
 
         HostTopology topo = new HostTopology(cc, MAX_CONNECTION);
 
-        hostId = NetworkTransport.AddHost(topo, port, null); //null accepts connections from EVERYBODY.
-        //you have to use a linux standalone build or etc.
+        hostId = NetworkTransport.AddHost(topo, port, null); 
         webHostId = NetworkTransport.AddWebsocketHost(topo, port, null);
 
         isStarted = true;

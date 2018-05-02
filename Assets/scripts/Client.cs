@@ -33,12 +33,7 @@ public class Client : MonoBehaviour {
 
         HostTopology topo = new HostTopology(cc, MAX_CONNECTION);
 
-        hostId = NetworkTransport.AddHost(topo, port, null); //null accepts connections from EVERYBODY.
-        //does not exist. 
-        //you cannot start a server in a web browser.
-        //you have to use a linux standalone build or etc.
-        //you can only use the Client in the browser, not the server.
-        //webHostId = NetworkTransport.AddWebsocketHost(topo, port, null);
+        hostId = NetworkTransport.AddHost(topo, port, null);
 
         connectionId = NetworkTransport.Connect(hostId, "localhost", port, 0, out error);
 
