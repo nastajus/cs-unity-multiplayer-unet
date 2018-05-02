@@ -23,13 +23,21 @@ https://www.youtube.com/watch?v=qGkkaNkq8co
 ### Terminology:
 - sockets: (used to) send data back and forth.
 - sockets: (used to) open a connection "between the *client* and the *game*."
+- host: defined on BOTH the client and the server. ✓
+- host: Starting a “Host” == Opening a Socket. ✓
+
 - Network Transport Layer.
 - reliable vs unreliable  ✓
-- UNET: peer-to-peer.
-- host: define on BOTH the client and the server. ✓
 - client: will connects with a simply line of code.
 - server: will wait for a connection and wait for messages.
 
+- LLAPI: Low-Level API (Unity-specific).
+- UNET: peer-to-peer (Unity-specific).
+
+
+### Off-topic questions:
+- `FixedUpdate()` vs `Update()` -- what are the differences, or when to care to use Fixed?
+- `private void Start()` -- what **benefit** does limiting **access modifier** to private scope give us on Unity's MonoBehavior's methods, since they're only known via reflection.
 
 
 ###### Legend 
