@@ -15,7 +15,11 @@ public class Client : MonoBehaviour {
     private int reliableChannel;
     private int unreliableChannel;
 
-    private bool isStarted = false;
+    private int connectionId;
+
+    private float connectionTime; //game flow
+    private bool isConnected = false;
+    private bool isStarted; //game flow
     private byte error;
 
     //not in Start() but rather on demand:
@@ -36,7 +40,10 @@ public class Client : MonoBehaviour {
         //you can only use the Client in the browser, not the server.
         //webHostId = NetworkTransport.AddWebsocketHost(topo, port, null);
 
-        isStarted = true;
+        connectionId = NetworkTransport.Connect(hostId, "localhost", port, 0, out error);
+
+        connectionTime = Time.time;
+        isConnected = true;
     }
 
 }
